@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Муж уходит к другой: как перестать зависеть от его решения и вернуть внимание к своей жизни</title>
+<meta name="description" content="Муж уходит к другой: почему его решение так сильно влияет на твое состояние, что поддерживает мучительный круг и почему одних разговоров, объяснений и силы воли недостаточно.">
+<style>
+:root{
+  --text:#2b2622;
+  --soft:#4a423c;
+  --muted:#6e645c;
+  --bg:#fbf8f4;
+  --paper:#ffffff;
+  --rule:#e8e0d7;
+  --accent:#9a4a2e;
+  --accent-dark:#7a3820;
+  --tint:#f5ede6;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);font-size:19px;line-height:1.72}
+main{max-width:680px;margin:0 auto;padding:0 24px 96px}
+p{margin:0 0 1.1em}
+strong{font-weight:700;color:#1d1916}
+
+/* Заголовок статьи */
+.hero{padding:72px 0 44px;margin-bottom:44px;border-bottom:2px solid var(--text)}
+.hero h1{font-size:2.4rem;line-height:1.16;margin:0;letter-spacing:-.02em;font-weight:700;color:#1d1916}
+
+/* Вступление */
+.lead-quote{margin:0 0 34px;padding:4px 0 4px 24px;border-left:4px solid var(--accent);font-size:1.38rem;line-height:1.45;font-style:italic;color:var(--accent-dark)}
+.lead-quote p{margin:0}
+
+/* Разделы */
+section{margin:0}
+section + section{margin-top:76px}
+h2{font-family:var(--sans);font-size:1.5rem;line-height:1.28;font-weight:800;letter-spacing:-.01em;margin:0 0 24px;color:#1d1916}
+h2::before{content:"";display:block;width:44px;height:4px;border-radius:2px;background:var(--accent);margin-bottom:16px}
+
+/* Сцены узнавания: оставляем карточки */
+.scenes{display:grid;gap:14px;margin:0 0 30px}
+.scene{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:18px 22px;font-size:.96em;line-height:1.62;color:var(--soft);box-shadow:0 1px 2px rgba(60,40,30,.04)}
+.scene p{margin:0}
+
+/* Смысловые акценты: без подложки, крупнее */
+.key{margin:30px 0;padding:2px 0 2px 22px;border-left:4px solid var(--accent);font-size:1.14em;line-height:1.55}
+.key p{margin:0}
+.key p + p{margin-top:.6em;font-size:.9em;color:var(--soft)}
+
+/* Два желания */
+.wishes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 26px}
+.wish{background:var(--paper);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:10px;padding:18px 20px;font-size:.96em;line-height:1.58}
+.wish p{margin:0}
+
+/* Попытки: простой список с разделителями */
+.tries{list-style:none;margin:6px 0 30px;padding:0}
+.tries li{position:relative;padding:13px 0 13px 28px;border-bottom:1px solid var(--rule)}
+.tries li:first-child{border-top:1px solid var(--rule)}
+.tries li::before{content:"";position:absolute;left:4px;top:1.32em;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+
+/* Внутренние фразы: тёплые цитаты */
+.quotes{list-style:none;margin:8px 0 26px;padding:0;display:grid;gap:10px}
+.quotes li{padding:13px 20px;background:var(--tint);border-radius:10px;font-style:italic;font-size:1.06em;color:var(--accent-dark)}
+
+/* Изменения: список с галочками без подложек */
+.changes{list-style:none;margin:10px 0 28px;padding:0}
+.changes li{position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--rule);line-height:1.62}
+.changes li:first-child{border-top:1px solid var(--rule)}
+.changes li::before{content:"";position:absolute;left:4px;top:1.2em;width:13px;height:7px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+
+/* Определение: единственная тонированная карточка механизма */
+.definition{margin:28px 0;padding:24px 26px;background:var(--tint);border-radius:12px}
+.definition p{margin:0}
+.definition p + p{margin-top:.85em}
+
+/* Схема цикла */
+.cycle{margin:30px 0 36px;padding:30px 24px;background:#2e2925;border-radius:16px;color:#f3ede7}
+.cycle ol{list-style:none;margin:0;padding:0;counter-reset:step}
+.cycle .stage{counter-increment:step;position:relative;background:#3c3531;border:1px solid #564b44;border-radius:10px;padding:16px 18px 16px 62px;font-family:var(--sans);font-size:.9em;line-height:1.55;color:#ece4dc}
+.cycle .stage::before{content:counter(step);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:#d59a74;color:#2e2925;font-weight:700;font-size:.95em;display:flex;align-items:center;justify-content:center}
+.cycle .stage strong{color:#fff}
+.cycle .arrow{text-align:center;color:#d59a74;font-size:1.5em;line-height:1;padding:8px 0;font-family:var(--sans)}
+
+/* Пояснение после схемы: без подложки */
+.note{margin:0 0 10px;padding:0 0 0 22px;border-left:2px solid var(--rule);color:var(--soft)}
+.note p{margin:0 0 .9em}
+.note p:last-child{margin:0}
+
+/* Решение о браке */
+.decision{margin:32px 0 0;padding:24px 26px;border:2px solid var(--accent);border-radius:14px;background:var(--paper)}
+.decision p{margin:0}
+
+/* Диагностика */
+.diag{margin:6px 0 0;padding:28px 26px 26px;background:var(--paper);border:1px solid var(--rule);border-top:5px solid var(--accent);border-radius:14px;box-shadow:0 6px 24px rgba(80,45,25,.07)}
+.diag p:last-of-type{margin-bottom:0}
+
+.facts{margin:0 0 28px;padding:24px 26px;background:var(--tint);border-radius:14px;font-family:var(--sans);line-height:1.6}
+.facts p{margin:0}
+.facts .terms{font-size:1rem;color:var(--soft)}
+.facts .terms strong{color:#1d1916}
+.facts .price-line{margin-top:16px;padding-top:16px;border-top:1px solid #e3d4c7;font-size:1.05rem;color:var(--soft)}
+.facts .price{display:block;font-size:2.15rem;line-height:1.1;font-weight:800;letter-spacing:-.01em;color:var(--accent-dark);margin-top:4px;white-space:nowrap}
+
+.final{margin:0;padding:32px 26px;background:#2e2925;color:#f3ede7;border-radius:16px;font-size:1.12em;line-height:1.6;text-align:center}
+.final p{margin:0}
+.final strong{color:#f2c3a2}
+
+/* Кнопки: терракота с объёмом */
+.cta{display:block;width:100%;max-width:420px;margin:26px auto 0;padding:18px 22px 17px;
+  background:linear-gradient(180deg,#c06a47 0%,#a5512f 55%,#93452a 100%);
+  color:#fff;text-decoration:none;text-align:center;font-family:var(--sans);font-weight:700;font-size:1.05rem;line-height:1.3;letter-spacing:.01em;
+  border-radius:14px;border:1px solid #7e3a22;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 4px 0 #6e321d,0 8px 18px rgba(110,50,29,.28);
+  text-shadow:0 1px 1px rgba(60,20,10,.35);
+  transition:transform .08s ease,box-shadow .08s ease,filter .15s ease;-webkit-tap-highlight-color:transparent}
+.cta:hover{filter:brightness(1.05)}
+.cta:focus-visible{outline:3px solid #f2c3a2;outline-offset:3px}
+.cta:active{transform:translateY(3px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 0 #6e321d,0 3px 8px rgba(110,50,29,.25)}
+.final .cta{margin-top:22px;border-color:#5e2a17}
+
+@media (max-width:600px){
+  body{font-size:18px;line-height:1.68}
+  main{padding:0 18px 72px}
+  .hero{padding:44px 0 30px;margin-bottom:32px}
+  .hero h1{font-size:1.8rem;line-height:1.2}
+  .lead-quote{font-size:1.2rem;padding-left:18px}
+  section + section{margin-top:60px}
+  h2{font-size:1.32rem;margin-bottom:20px}
+  h2::before{width:36px;margin-bottom:14px}
+  .wishes{grid-template-columns:1fr}
+  .scene,.wish,.definition,.decision,.diag,.facts{padding-left:18px;padding-right:18px}
+  .key{padding-left:16px;font-size:1.1em}
+  .note{padding-left:16px}
+  .cycle{padding:22px 14px}
+  .cycle .stage{padding:14px 14px 14px 54px}
+  .cycle .stage::before{left:12px}
+  .facts .price{font-size:2rem}
+  .final{padding:26px 18px}
+  .cta{padding:19px 18px 18px;min-height:56px}
+}
+
+@media print{
+  body{background:#fff;color:#000;font-size:11.5pt;line-height:1.5}
+  main{max-width:none;padding:0}
+  .hero{padding:0 0 12pt}
+  .hero h1{font-size:20pt}
+  section + section{margin-top:18pt}
+  h2{font-size:14pt;margin:0 0 8pt;page-break-after:avoid;break-after:avoid}
+  h2::before{display:none}
+  .scene,.key,.wish,.note,.definition,.decision,.diag,.facts,.lead-quote,.quotes li{background:none;border-color:#999;box-shadow:none;break-inside:avoid;page-break-inside:avoid}
+  .cycle,.final{background:none;color:#000;border:1px solid #555;break-inside:avoid;page-break-inside:avoid}
+  .cycle .stage{background:none;border-color:#999;color:#000}
+  .cycle .stage::before{background:#ddd;color:#000}
+  .cycle .stage strong,.final strong,.facts .price{color:#000}
+  .cycle .arrow{color:#000}
+  .cta{display:none}
+  p{orphans:3;widows:3}
+}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','271762323995733');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=271762323995733&ev=PageView&noscript=1"></noscript>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var YM_ID = 114249017;
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(YM_ID, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114249017" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "zdh4c95kjs");
+</script>
+<!-- /Microsoft Clarity -->
+</head>
+<body>
+<main>
+<article>
+
+<header class="hero">
+<h1>Муж уходит к другой: как перестать зависеть от его решения и вернуть внимание к своей жизни</h1>
+</header>
+
+<section>
+<blockquote class="lead-quote"><p>«Я была рядом, помогала строить эту жизнь — а теперь он будет жить этой жизнью с другой».</p></blockquote>
+<p>Если эта мысль возвращается к тебе снова и снова, ты знаешь, как она звучит изнутри.</p>
+<p>Ты вкладывала в совместную жизнь <strong>годы, силы и заботу</strong>, проходила вместе с ним через трудности, у вас было общее представление о том, какой будет ваша жизнь дальше.</p>
+<p>А теперь ты представляешь, как его внимание и заботу получает другая и как она живет той жизнью, которую вы строили вдвоем.</p>
+<p>И не отпускает вопрос: <strong>почему после всего пережитого именно я остаюсь с этой болью и не понимаю, как мне теперь жить дальше?</strong></p>
+<p>Он сказал, что уходит. Или уже ушел и живет с ней. Или пока остается дома, но <strong>ты каждый вечер ждешь, что он все-таки выберет ее</strong>.</p>
+<p>В каждом из этих случаев <strong>жизнь будто перестает принадлежать тебе</strong>: утро начинается с мысли о нем, день проходит в догадках, что он сейчас делает и с кем, а ночью память снова возвращает к тому, как все было раньше.</p>
+<p>Эта статья для тебя, если ты оказалась в такой ситуации и пытаешься найти ответ на два вопроса: как он может строить жизнь с другой после всего, что было между вами, и как тебе самой перестать зависеть от его решения и вернуть внимание к собственной жизни.</p>
+<p>Я не буду уговаривать тебя забыть его или, наоборот, бороться за семью любой ценой.</p>
+<p>Я хочу показать, <strong>что именно удерживает тебя в этом мучительном круге</strong> и почему одних разговоров, объяснений и попыток взять себя в руки недостаточно, чтобы он прекратился.</p>
+</section>
+
+<section>
+<h2>Как это выглядит изнутри</h2>
+<div class="scenes">
+<div class="scene"><p>Одна женщина вечером моет посуду и вдруг ловит себя на том, что представляет, как он ведет ту женщину в кафе, выбирает ей подарок, спрашивает, как прошел ее день, — то внимание и ту заботу, которые когда-то получала она сама.</p></div>
+<div class="scene"><p>Другая в третий раз за час открывает страницу той женщины. Рассматривает фотографии, пытается понять, что в ней такого: моложе, спокойнее, легче? И следом приходит вопрос, на который нет ответа: что нужно было сделать иначе, чтобы он остался?</p></div>
+<div class="scene"><p>Третья держит телефон рядом даже ночью. Она не обязательно ждет, что он вернется. Ей нужно хотя бы сообщение, в котором он объяснит, что произошло, признает, что поступил несправедливо, или скажет, что ему тоже тяжело.</p></div>
+<div class="scene"><p>Кто-то снова и снова прокручивает в голове годы брака и каждый раз упирается в одно и то же: как все это могло перестать для него что-то значить.</p></div>
+<div class="scene"><p>Кто-то продолжает разговаривать с мужем — о детях, о деньгах, о квартире — и в каждом разговоре ищет еще что-то: интонацию, паузу, хоть какой-то знак, что она для него по-прежнему важна. После разговора несколько часов уходит на то, чтобы разобрать каждую его фразу.</p></div>
+<div class="scene"><p>А кто-то после его ухода к другой сама подала на развод и понимает, что брак закончился, — и все равно замечает, что ее сон, настроение и силы на работу и детей зависят от того, что он сделал сегодня.</p></div>
+</div>
+<p>Возможно, ты узнала себя в одной из этих сцен, возможно — в нескольких, а может быть, у тебя все выглядит по-своему.</p>
+<div class="key"><p>Общее у них одно: <strong>его выбор продолжает управлять твоим состоянием, хотя ты этого не выбирала</strong>.</p></div>
+</section>
+
+<section>
+<h2>Желание вернуть его понятно</h2>
+<p>В такой ситуации женщина часто слышит: «Хватит унижаться», «Он того не стоит», «Выбери себя».</p>
+<p>Как будто правильная женщина должна в один день перестать надеяться и закрыть за ним дверь.</p>
+<div class="wishes">
+<div class="wish"><p>Одна женщина хочет, чтобы муж вернулся и семья сохранилась.</p></div>
+<div class="wish"><p>Другая уже не ждет этого, но хочет хотя бы, чтобы он раскаялся и объяснил, что произошло.</p></div>
+</div>
+<p>И то и другое понятно: за этим годы общей жизни, дети, планы, привычка засыпать рядом. Я не требую от тебя сначала отказаться от надежды и только потом разбираться с собой.</p>
+<p>Но и обещать, что он вернется или изменится, я не стану. <strong>Его уход — его решение и его ответственность.</strong> Я не буду додумывать, почему он так поступил.</p>
+<p>В этой статье важно другое: <strong>почему его уход так влияет на твое состояние</strong>, что от него начинают зависеть сон, настроение и силы.</p>
+<p>Можно все еще хотеть, чтобы он вернулся, и при этом уже хотеть другого — самой выйти из этой боли.</p>
+<p>Перестать просыпаться с мыслью о нем, открывать ее страницу и разбирать каждое его слово, перестать отдавать ему весь свой день. Одно не отменяет другого.</p>
+<p>Вернется он или нет, ты хочешь, чтобы его решение больше не управляло твоим сном, настроением, силами и тем, как проходит твоя жизнь.</p>
+<div class="key"><p><strong>Именно на это и направлена моя работа: на твое состояние, а не на то, чтобы изменить его.</strong></p></div>
+</section>
+
+<section>
+<h2>Что ты уже пробовала и почему легче становится ненадолго</h2>
+<p>Чтобы получить ответ или хоть немного облегчения, женщины пробуют разное.</p>
+<ul class="tries">
+<li>Одна <strong>разговаривает с мужем</strong> и выясняет, что произошло и почему.</li>
+<li>Другая <strong>сравнивает себя с той женщиной</strong>, ищет в ней недостатки или <strong>пытается стать лучше</strong>: худеет, меняет стиль, старается быть спокойнее и мудрее.</li>
+<li>Третья <strong>заставляет себя не думать о случившемся</strong> — удаляет его номер, уезжает на неделю к сестре.</li>
+<li>Кто-то <strong>читает статьи и разбирается в своем детстве</strong>, чтобы понять, почему так реагирует.</li>
+</ul>
+<p>Что-то из этого действительно <strong>приносит облегчение</strong>.</p>
+<p>Он написал, что ему тоже тяжело, — и вечер прошел почти спокойно. Найденный в другой недостаток на время успокаивает. После долгого разговора кажется, что стало понятнее.</p>
+<p>А потом приходит новость, что они вместе поехали к его родителям, — и <strong>все возвращается с удвоенной силой</strong>.</p>
+<p>Одна снова рассматривает фотографии той женщины, другая снова ждет, заметит ли он, как она изменилась, третья при первой же новости о нем возвращается к тем же мыслям.</p>
+<p>Почему так происходит, станет понятнее, если посмотреть, что эта ситуация значит для тебя и что она задевает внутри.</p>
+</section>
+
+<section>
+<h2>Потеря и то, что она значит для тебя</h2>
+<p>Уход мужа к другой — <strong>реальная потеря</strong>. Рушится совместное будущее, меняется жизнь детей, приходится решать вопросы с жильем и деньгами.</p>
+<p>Это больно, и с этим незачем спорить.</p>
+<p>Но боль часто не исчерпывается потерей. Его поступок приобретает для женщины <strong>личный смысл</strong>:</p>
+<ul class="quotes">
+<li>«он выбрал не меня»,</li>
+<li>«меня заменили»,</li>
+<li>«после всего, что я вложила в нашу жизнь, неужели он все равно так со мной поступил?».</li>
+</ul>
+<p>А за этим смыслом поднимается то, что задевает глубже всего, — то, какой она начинает себя чувствовать: <strong>ненужной, замененной, проигравшей или недостойной того, чтобы выбрали ее.</strong></p>
+<div class="definition">
+<p>Именно это в моей методике называется <strong>негативным самоопределением</strong>. Проще говоря, это внутренняя программа: то, какой ты чувствуешь себя в том, что происходит.</p>
+<p>Это не мысль и не фраза, которую ты говоришь себе. Ты можешь никогда не называть его словами и не задумываться о нем: для тебя это прежде всего переживание, которое невыносимо чувствовать и от которого хочется поскорее избавиться.</p>
+<p>Но <strong>именно от этого ощущения</strong> зависят многие твои чувства и поступки в этой ситуации.</p>
+</div>
+<p><strong>Поэтому его новая жизнь задевает так сильно.</strong></p>
+<p>Новость о том, что они вместе поехали отдыхать, фотография с общими знакомыми, его спокойный голос в телефоне звучат внутри не просто как факты. Они касаются того самого ощущения себя, и <strong>каждый раз становится больно заново</strong>.</p>
+</section>
+
+<section>
+<h2>Почему психика так защищает тебя</h2>
+<p><strong>Откуда у этого ощущения такая сила?</strong></p>
+<p>Маленький ребенок полностью зависит от взрослых: ему нужны их забота, принятие и защита. Поэтому критика, осуждение или холод близкого взрослого могут переживаться им как угроза потерять любовь и опору.</p>
+<p>Детский опыт у каждой женщины свой, но именно оттуда это ощущение часто получает свою силу во взрослой жизни.</p>
+<p>Поэтому психика защищает тебя от этого ощущения <strong>автоматически</strong> — раньше, чем ты успеваешь что-то решить. Так и складывается круг:</p>
+<figure class="cycle" aria-label="Схема защитного цикла">
+<ol>
+<li class="stage"><strong>Негативное самоопределение</strong> — болезненное ощущение себя: ненужная, замененная, проигравшая</li>
+<li class="arrow" aria-hidden="true">↓</li>
+<li class="stage"><strong>Психика защищается от этого ощущения через чувства</strong> — страх окончательно его потерять, обиду, злость, стыд, вину</li>
+<li class="arrow" aria-hidden="true">↓</li>
+<li class="stage"><strong>Чувства толкают на защитные действия</strong> — искать свою ошибку, сравнивать себя с ней, узнавать о ней больше, добиваться объяснения, напоминать о себе, становиться лучше в надежде, что он заметит, ждать его раскаяния</li>
+<li class="arrow" aria-hidden="true">↓</li>
+<li class="stage"><strong>На время становится легче</strong></li>
+<li class="arrow" aria-hidden="true">↓</li>
+<li class="stage"><strong>Новое сообщение, известие или другое напоминание о нем</strong> снова задевает то же ощущение — и круг запускается заново</li>
+</ol>
+</figure>
+<div class="note">
+<p>В жизни это выглядит так. Сначала тебя эмоционально качает: утром ты держишься, а вечером плачешь.</p>
+<p>А дальше круг проявляется по-разному: одна следит за той женщиной, другая звонит мужу, третья снова пытается поговорить с ним или вернуть его, кто-то ссорится, кто-то ищет все новые объяснения. Набор действий у каждой свой, но <strong>запускаются они одинаково — бессознательно и автоматически</strong>.</p>
+<p>Это не значит, что ты слабая или что у тебя «неправильный характер»: внутренняя программа влияет на твои чувства, состояние и поведение.</p>
+</div>
+</section>
+
+<section>
+<h2>Почему одних разговоров, объяснений и силы воли недостаточно</h2>
+<p>Теперь понятно, почему облегчение от его внимания, раскаяния, теплых слов или даже намека на возвращение держится недолго: <strong>оно приходит снаружи</strong>.</p>
+<p>Болезненное ощущение внутри никуда не делось, поэтому снова становится важно увидеть в его словах или поступках, что ты ему дорога.</p>
+<p>А когда он замолкает или приходит новость о нем и другой женщине, возвращаются и боль, и прежние вопросы.</p>
+<p>При этом разговоры и выяснение фактов могут помочь понять, что на самом деле происходит, договориться о детях, деньгах, имуществе и о том, какими будут ваши отношения дальше, принять практические решения.</p>
+<p>Но сами по себе они <strong>не прорабатывают внутреннюю причину</strong>, которая поддерживает мучительный круг и из-за которой его выбор продолжает переживаться как оценка тебя самой.</p>
+<p>То же со сравнением, с попытками стать лучше, найти недостатки в другой или заставить себя не думать о нем: они на время заглушают боль, но не меняют того, что ее поддерживает.</p>
+<p>Не спасает и понимание. Можно точно знать, почему ты так реагируешь, — и продолжать ждать его сообщения.</p>
+<div class="key"><p><strong>Понимание причин не равно проработке</strong>: психика защищает раньше, чем включается рассуждение. И это не слабость характера, а то, как устроена защита.</p></div>
+<p>Одного понимания недостаточно, пока негативное самоопределение продолжает запускать прежние чувства и действия. Именно с ним и связана моя работа.</p>
+</section>
+
+<section>
+<h2>С чем мы работаем и что меняется</h2>
+<p>Меня зовут <strong>Есиль Аманжолов</strong>. Я работаю по собственной авторской методике глубинной работы с негативными самоопределениями.</p>
+<div class="key"><p><strong>Мы выявляем и прорабатываем все негативные самоопределения, которые поддерживают твой мучительный круг.</strong></p></div>
+<p>Результат этой работы — не умение терпеть, сдерживать себя или правильно думать о ситуации. Он виден по тому, как меняются твои привычные реакции.</p>
+<p>Раньше, чтобы хоть ненадолго стало легче, ты могла звонить ему, следить за ней, добиваться разговора или снова и снова сравнивать себя с ней.</p>
+<p>Когда негативные самоопределения, поддерживающие этот круг, проработаны, <strong>прежняя мучительная потребность все это делать исчезает</strong>.</p>
+<ul class="changes">
+<li><strong>Уходит обида</strong>, которая держала тебя рядом с ним даже на расстоянии.</li>
+<li><strong>Прекращается мучительная зависимость</strong> от его выбора, его сообщений и его отношений с другой: о потерянном может быть грустно, новость о них может быть неприятной, но она больше не обрушивает твое состояние и не забирает весь день.</li>
+<li><strong>Исчезает прежнее внутреннее принуждение</strong> подстраиваться, угождать, сравнивать себя с ней, следить за ней, добиваться подтверждений своей ценности и возвращаться к одним и тем же разговорам ради нескольких часов облегчения.</li>
+</ul>
+<div class="key">
+<p><strong>Вместо этого появляются внутренняя свобода и спокойствие.</strong></p>
+<p>И дело не в том, что ты держишь себя в руках, — тебе это просто больше не нужно.</p>
+</div>
+<p>Внимание и силы, которые уходили на него, <strong>возвращаются к твоей собственной жизни</strong>: к детям, работе, здоровью, близким людям и к тому, чего хочешь ты сама.</p>
+<div class="decision">
+<p><strong>Решение о браке остается за тобой.</strong></p>
+<p style="margin-top:.7em">Ты можешь сохранять отношения, обозначать свои условия или завершать их — но принимать это решение исходя из реальных обстоятельств и собственных желаний, а не из страха снова почувствовать себя ненужной.</p>
+</div>
+</section>
+
+<section>
+<h2>Почему важно разобраться именно в твоей ситуации</h2>
+<p>Похожие обстоятельства у разных женщин могут запускать разные внутренние сценарии.</p>
+<p>Уход мужа к другой одинаково мучителен, но у разных женщин его поддерживают разные негативные самоопределения, и проявляется он тоже по-своему.</p>
+<p>Поэтому <strong>конкретный механизм выясняется индивидуально</strong>, на твоей собственной истории.</p>
+</section>
+
+<section>
+<h2>С чего начать</h2>
+<div class="diag">
+<p><strong>Первый шаг — индивидуальная диагностика.</strong> На ней мы разбираем твою ситуацию и выявляем внутренний механизм, который поддерживает твое состояние.</p>
+<p>Ты сможешь понять, почему одно его сообщение снова возвращает тебя к надежде и ожиданию, почему известия о нем и другой женщине забирают столько сил и внимания и что запускает сравнение себя с ней, ожидание его сообщений, попытки вернуть мужа или добиться от него раскаяния.</p>
+<p>После встречи ты понимаешь, что с тобой происходит, в каком сценарии ты находишься, в чем корень проблемы и что с этим делать, — и знаешь направление дальнейшей работы.</p>
+</div>
+<a class="cta js-wa" href="https://wa.me/77772040670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%95%D1%81%D0%B8%D0%BB%D1%8C.%20%D0%9F%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BB%D0%B0%20%D0%B2%D0%B0%D1%88%D1%83%20%D1%81%D1%82%D0%B0%D1%82%D1%8C%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83." target="_blank" rel="noopener">Хочу записаться на диагностику</a>
+</section>
+
+<section>
+<h2>Как записаться</h2>
+<div class="facts">
+<p class="terms">Диагностика проходит <strong>индивидуально</strong>, <strong>онлайн по видеосвязи</strong> (Zoom или WhatsApp), длится <strong>до 90 минут</strong>.</p>
+<p class="price-line">Стоимость — <span class="price">15 000 тенге.</span></p>
+</div>
+<div class="final">
+<p>Если ты хочешь разобраться, что удерживает тебя в этой боли и с чем нужно работать, чтобы этот мучительный круг прекратился, нажми на кнопку ниже.</p>
+<a class="cta js-wa" href="https://wa.me/77772040670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%95%D1%81%D0%B8%D0%BB%D1%8C.%20%D0%9F%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BB%D0%B0%20%D0%B2%D0%B0%D1%88%D1%83%20%D1%81%D1%82%D0%B0%D1%82%D1%8C%D1%8E%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BD%D0%B0%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83." target="_blank" rel="noopener">Хочу записаться на диагностику</a>
+</div>
+</section>
+
+</article>
+</main>
+<script>
+(function () {
+  var PHONE = "77772040670";
+  // Цифра из конца utm_content (reels_1 → 1) или ?creative=1..5
+  var BOOK = { "1": "", "2": "личную ", "3": "глубинную ", "4": "персональную ", "5": "индивидуальную " };
+
+  function getKey() {
+    try {
+      var q = new URLSearchParams(window.location.search);
+      var c = (q.get("creative") || "").trim();
+      if (BOOK.hasOwnProperty(c)) return c;
+      var m = (q.get("utm_content") || "").match(/(\d+)\s*$/);
+      if (m && BOOK.hasOwnProperty(m[1])) return m[1];
+    } catch (e) {}
+    return "";
+  }
+
+  var key = getKey();
+  try { if (window.clarity) clarity("set", "creative", key || "none"); } catch (e) {}
+  var bookText = key ? "Здравствуйте, Есиль. Хочу записаться на " + BOOK[key] + "диагностику."
+                     : "Здравствуйте, Есиль. Прочитала вашу статью, хочу на диагностику.";
+
+  var sent = false;
+  function track() {
+    if (sent) return;
+    sent = true;
+    try { if (window.fbq) fbq("track", "Lead"); } catch (e) {}
+    try { if (window.ym && window.YM_ID) ym(YM_ID, "reachGoal", "whatsapp_click"); } catch (e) {}
+    try { if (window.clarity) clarity("event", "whatsapp_click"); } catch (e) {}
+  }
+
+  var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  var links = document.querySelectorAll("a.js-wa");
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute("href", "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(bookText));
+    links[i].addEventListener("click", function (ev) {
+      var href = this.getAttribute("href");
+      track();
+      if (isMobile) {
+        ev.preventDefault();
+        setTimeout(function () { window.location.href = href; }, 400);
+      }
+    });
+  }
+
+  // Цели дочитывания 25/50/75/100, каждая один раз
+  var marks = [25, 50, 75, 100], done = {};
+  function onScroll() {
+    var d = document.documentElement;
+    var max = d.scrollHeight - d.clientHeight;
+    var pct = max > 0 ? (window.pageYOffset || d.scrollTop) / max * 100 : 100;
+    for (var j = 0; j < marks.length; j++) {
+      var m = marks[j];
+      if (!done[m] && pct >= (m === 100 ? 98 : m)) {
+        done[m] = true;
+        try { if (window.ym && window.YM_ID) ym(YM_ID, "reachGoal", "scroll_" + m); } catch (e) {}
+        try { if (window.clarity) clarity("event", "scroll_" + m); } catch (e) {}
+      }
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+</script>
+</body>
+</html>
