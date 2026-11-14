@@ -372,8 +372,16 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 <script>
 (function () {
   var PHONE = "77772040670";
-  // Цифра из конца utm_content (reels_1 → 1) или ?creative=1..5
-  var BOOK = { "1": "", "2": "личную ", "3": "глубинную ", "4": "персональную ", "5": "индивидуальную " };
+  // Цифра из конца utm_content (reels_1 → 1) или ?creative=1..7
+  var BOOK = {
+    "1": "Хочу записаться на диагностику.",
+    "2": "Хочу записаться на личную диагностику.",
+    "3": "Хочу записаться на глубинную диагностику.",
+    "4": "Хочу записаться на персональную диагностику.",
+    "5": "Хочу записаться на индивидуальную диагностику.",
+    "6": "Хочу пройти диагностику.",
+    "7": "Хочу попасть на диагностику."
+  };
 
   function getKey() {
     try {
@@ -388,7 +396,7 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
   var key = getKey();
   try { if (window.clarity) clarity("set", "creative", key || "none"); } catch (e) {}
-  var bookText = key ? "Здравствуйте, Есиль. Хочу записаться на " + BOOK[key] + "диагностику."
+  var bookText = key ? "Здравствуйте, Есиль. " + BOOK[key]
                      : "Здравствуйте, Есиль. Прочитала вашу статью, хочу на диагностику.";
 
   var sent = false;
